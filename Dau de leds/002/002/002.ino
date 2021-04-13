@@ -1,7 +1,6 @@
-
 /**********************************************************************************
 **                                                                               **
-**                              Array de 8 LEDs                                  **
+**                                  DAU de LEDS                                  **
 **                                                                               **
 **                                                                               **
 **********************************************************************************/
@@ -16,9 +15,9 @@ const int led4 = 9;          // donar nom al pin 9 de l’Arduino
 const int led5 = 10;         // donar nom al pin 10 de l’Arduino
 const int led6 = 11;         // donar nom al pin 11 de l’Arduino
 const int led7 = 12;         // donar nom al pin 12 de l’Arduino
-int buttonState = 0;
 const int buttonPin = 2;
-long randnumb = 0;
+boolean buttonEstat = LOW;
+int numb = 0;
 
 //********** Setup ****************************************************************
 void setup()
@@ -31,19 +30,20 @@ void setup()
   pinMode(led6, OUTPUT);     // definir el pin 11 com una sortida
   pinMode(led7, OUTPUT);     // definir el pin 12 com una sortida
   pinMode(buttonPin, INPUT);
+  
 }
 
 //********** Loop *****************************************************************
 void loop()
 {
-  buttonState = digitalRead(buttonPin);
+  buttonEstat = digitalRead (buttonPin);
+  while (buttonEstat == HIGH)
+    {
+       numb = random (1,7);
 
-if (buttonState == HIGH){ 
-  randnumb = random (1, 6);
-}
-switch(randnumb)
-{ 
-  case 1:
+    switch (numb)
+    {
+      case 1:
   digitalWrite(led1, LOW);   
   digitalWrite(led2, LOW); 
   digitalWrite(led3, LOW);   
@@ -53,8 +53,8 @@ switch(randnumb)
   digitalWrite(led7, LOW);  
 
   delay(1000);
-break;
-case 2:
+  break;
+  case 2:
   digitalWrite(led1, LOW);   
   digitalWrite(led2, LOW); 
   digitalWrite(led3, HIGH);   
@@ -64,8 +64,8 @@ case 2:
   digitalWrite(led7, LOW);  
 
   delay(1000); 
-break;
-case 3:
+  break;
+  case 3:
   digitalWrite(led1, HIGH);   
   digitalWrite(led2, LOW); 
   digitalWrite(led3, LOW);   
@@ -75,8 +75,8 @@ case 3:
   digitalWrite(led7, HIGH);  
 
   delay(1000);
-break;
-case 4:
+  break;
+  case 4:
   digitalWrite(led1, HIGH);   
   digitalWrite(led2, LOW); 
   digitalWrite(led3, HIGH);   
@@ -86,8 +86,8 @@ case 4:
   digitalWrite(led7, HIGH);  
 
   delay(1000);
-break;
-case 5:
+  break;
+  case 5:
   digitalWrite(led1, HIGH);   
   digitalWrite(led2, LOW); 
   digitalWrite(led3, HIGH);   
@@ -97,8 +97,8 @@ case 5:
   digitalWrite(led7, HIGH);  
 
   delay(1000);
-break;
-case 6:
+   break;
+   case 6:
   digitalWrite(led1, HIGH);   
   digitalWrite(led2, HIGH); 
   digitalWrite(led3, HIGH);   
@@ -109,5 +109,18 @@ case 6:
 
   delay(1000);
   break;
-}
+    }
+    buttonEstat = digitalRead (buttonPin);
+    }
+    if (buttonEstat == LOW);
+    {
+    digitalWrite(led1, HIGH);   
+    digitalWrite(led2, HIGH); 
+    digitalWrite(led3, HIGH);   
+    digitalWrite(led4, HIGH);
+    digitalWrite(led5, HIGH); 
+    digitalWrite(led6, HIGH);   
+    digitalWrite(led7, HIGH);
+    delay (1000);
+    }
 }
