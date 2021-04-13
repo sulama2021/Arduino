@@ -1,3 +1,4 @@
+
 /**********************************************************************************
 **                                                                               **
 **                              Array de 8 LEDs                                  **
@@ -32,6 +33,16 @@ void setup()
 void loop()
 {
   digitalWrite(ledA, HIGH);   
+  digitalWrite(ledB, LOW); 
+  digitalWrite(ledC, HIGH);   
+  digitalWrite(ledD, HIGH);
+  digitalWrite(ledE, LOW); 
+  digitalWrite(ledF, HIGH);   
+  digitalWrite(ledG, HIGH);  
+
+  delay(1000);
+
+  digitalWrite(ledA, LOW);   
   digitalWrite(ledB, HIGH); 
   digitalWrite(ledC, HIGH);   
   digitalWrite(ledD, HIGH);
@@ -42,59 +53,19 @@ void loop()
   delay(1000);
 
   digitalWrite(ledA, LOW);   
-  digitalWrite(ledB, HIGH); 
-  digitalWrite(ledC, HIGH);   
-  digitalWrite(ledD, LOW);
-  digitalWrite(ledE, LOW); 
-  digitalWrite(ledF, LOW);   
-  digitalWrite(ledG, LOW);  
-
-  delay(1000);
-
-  digitalWrite(ledA, HIGH);   
-  digitalWrite(ledB, HIGH); 
+  digitalWrite(ledB, LOW); 
   digitalWrite(ledC, LOW);   
   digitalWrite(ledD, HIGH);
   digitalWrite(ledE, HIGH); 
-  digitalWrite(ledF, LOW);   
-  digitalWrite(ledG, HIGH);  
+  digitalWrite(ledF, HIGH);   
+  digitalWrite(ledG, LOW);  
 
   delay(1000);
 
   digitalWrite(ledA, HIGH);   
-  digitalWrite(ledB, HIGH); 
-  digitalWrite(ledC, HIGH);   
-  digitalWrite(ledD, HIGH);
-  digitalWrite(ledE, LOW); 
-  digitalWrite(ledF, LOW);   
-  digitalWrite(ledG, HIGH);  
-
-  delay(1000);
-
-  digitalWrite(ledA, LOW);   
   digitalWrite(ledB, HIGH); 
   digitalWrite(ledC, HIGH);   
   digitalWrite(ledD, LOW);
-  digitalWrite(ledE, LOW); 
-  digitalWrite(ledF, HIGH);   
-  digitalWrite(ledG, HIGH);  
-
-  delay(1000);
-
-  digitalWrite(ledA, HIGH);   
-  digitalWrite(ledB, LOW); 
-  digitalWrite(ledC, HIGH);   
-  digitalWrite(ledD, HIGH);
-  digitalWrite(ledE, LOW); 
-  digitalWrite(ledF, HIGH);   
-  digitalWrite(ledG, HIGH);  
-
-  delay(1000);
-
-  digitalWrite(ledA, LOW);   
-  digitalWrite(ledB, LOW); 
-  digitalWrite(ledC, HIGH);   
-  digitalWrite(ledD, HIGH);
   digitalWrite(ledE, HIGH); 
   digitalWrite(ledF, HIGH);   
   digitalWrite(ledG, HIGH);  
@@ -102,10 +73,10 @@ void loop()
   delay(1000);
 
   digitalWrite(ledA, HIGH);   
-  digitalWrite(ledB, HIGH); 
+  digitalWrite(ledB, LOW); 
   digitalWrite(ledC, HIGH);   
   digitalWrite(ledD, LOW);
-  digitalWrite(ledE, LOW); 
+  digitalWrite(ledE, HIGH); 
   digitalWrite(ledF, LOW);   
   digitalWrite(ledG, LOW);  
 
@@ -114,20 +85,11 @@ void loop()
   digitalWrite(ledA, HIGH);   
   digitalWrite(ledB, HIGH); 
   digitalWrite(ledC, HIGH);   
-  digitalWrite(ledD, HIGH);
+  digitalWrite(ledD, LOW);
   digitalWrite(ledE, HIGH); 
   digitalWrite(ledF, HIGH);   
   digitalWrite(ledG, HIGH);  
 
   delay(1000);
 
-  digitalWrite(ledA, HIGH);   
-  digitalWrite(ledB, HIGH); 
-  digitalWrite(ledC, HIGH);   
-  digitalWrite(ledD, LOW);
-  digitalWrite(ledE, LOW); 
-  digitalWrite(ledF, HIGH);   
-  digitalWrite(ledG, HIGH);  
-
-  delay(1000);
 }
