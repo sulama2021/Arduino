@@ -15,7 +15,7 @@ const int led4 = 9;          // donar nom al pin 9 de l’Arduino
 const int led5 = 10;         // donar nom al pin 10 de l’Arduino
 const int led6 = 11;         // donar nom al pin 11 de l’Arduino
 const int led7 = 12;         // donar nom al pin 12 de l’Arduino
-const int buttonPin = 2;
+const int buttonPin = 3;
 boolean buttonEstat = LOW;
 int numb = 0;
 
@@ -37,7 +37,7 @@ void setup()
 void loop()
 {
   buttonEstat = digitalRead (buttonPin);
-  while (buttonEstat == HIGH)
+  if (buttonEstat == HIGH)
     {
        numb = random (1,7);
 
@@ -110,17 +110,5 @@ void loop()
   delay(1000);
   break;
     }
-    buttonEstat = digitalRead (buttonPin);
-    }
-    if (buttonEstat == LOW);
-    {
-    digitalWrite(led1, HIGH);   
-    digitalWrite(led2, HIGH); 
-    digitalWrite(led3, HIGH);   
-    digitalWrite(led4, HIGH);
-    digitalWrite(led5, HIGH); 
-    digitalWrite(led6, HIGH);   
-    digitalWrite(led7, HIGH);
-    delay (1000);
     }
 }
